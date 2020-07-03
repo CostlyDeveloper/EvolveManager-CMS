@@ -1,52 +1,53 @@
+
 var $ = jQuery.noConflict();
 jQuery(document).ready(function ($) {
-    //MODULE PATH
     var modulep = 'media';
     var modulePath = 'modules/' + modulep + '/';
-    // /modulePath
     lazyload();
     //DELETE GALLERY
+
     $(document).on('click touchstart', '.delete_gallery', function () {
+
         var GalleryId = $(this).attr('data-id');
         var new_type = 'purple';
         $.confirm({
-            title: lang.galleryDelete,
-            content: lang.galleryDeleteContent,
-            autoClose: 'cancelAction|8000',
-            icon: 'fa fa-warning',
-            type: new_type,
-            //'blue, green, red, orange, purple & dark'
-            escapeKey: true,
-            buttons: {
-                deleteUser: {
-                    text: lang.galleryDeleteConfirm,
-                    action: function () {
-                        var moduleID = $('#moduleID').val();
-                        var $form = $('#token_data');
-                        var data = {
-                            moduleID: moduleID,
-                            gallery_id: GalleryId
-                        };
-                        data = $form.serialize() + '&' + $.param(data);
-                        $.ajax({
-                            type: "POST",
-                            url: modulePath + 'actions/delete_gallery.php',
-                            data: data,
-                            cache: false,
-                            success: function (html) {
-                                $("#galtr_" + GalleryId).fadeOut();
-                                showMessage('success', '', '');
-                            },
-                            error: function (data) {
-                                showMessage('error', '', '');
-                            }
-                        }); //Ajax
-                    }
-                },
-                cancelAction: function () {
-                }
-            }
-        }); //Confirm
+                      title: lang.galleryDelete,
+                      content: lang.galleryDeleteContent,
+                      autoClose: 'cancelAction|8000',
+                      icon: 'fa fa-warning',
+                      type: new_type,
+                      //'blue, green, red, orange, purple & dark'
+                      escapeKey: true,
+                      buttons: {
+                          deleteUser: {
+                              text: lang.galleryDeleteConfirm,
+                              action: function () {
+                                  var moduleID = $('#moduleID').val();
+                                  var $form = $('#token_data');
+                                  var data = {
+                                      moduleID: moduleID,
+                                      gallery_id: GalleryId
+                                  };
+                                  data = $form.serialize() + '&' + $.param(data);
+                                  $.ajax({
+                                             type: "POST",
+                                             url: modulePath + 'actions/delete_gallery.php',
+                                             data: data,
+                                             cache: false,
+                                             success: function (html) {
+                                                 $("#galtr_" + GalleryId).fadeOut();
+                                                 showMessage('success', '', '');
+                                             },
+                                             error: function (data) {
+                                                 showMessage('error', '', '');
+                                             }
+                                         }); //Ajax
+                              }
+                          },
+                          cancelAction: function () {
+                          }
+                      }
+                  }); //Confirm
     });
     // /DELETE GALLERY
 
@@ -57,44 +58,44 @@ jQuery(document).ready(function ($) {
         var newTitle = lang.commonCreateNew;
         var phpContent = 'url:' + modulePath + 'confirmBox/add_gal.php';
         $.confirm({
-            title: newTitle,
-            content: phpContent,
-            buttons: {
-                formSubmit: {
-                    text: lang.commonCreateButton,
-                    btnClass: new_btn,
-                    action: function () {
-                        var moduleID = $('#moduleID').val();
-                        var name = $('#instance_name').val();
-                        var $form = $('#token_data');
-                        var data = {
-                            moduleID: moduleID,
-                            name: name
-                        };
-                        data = $form.serialize() + '&' + $.param(data);
-                        $.ajax({
-                            type: 'POST',
-                            dataType: 'json',
-                            url: modulePath + 'actions/add_gal.php',
-                            data: data,
-                            cache: false,
-                            success: function (response) {
-                                showMessage('success', '', '');
-                                window.setTimeout(window.location.replace(response.load_new), 500);
-                            },
-                            error: function (data) {
-                                showMessage('error', '', '');
-                            }
-                        }); //AJAX
-                    } //CONFIRM ACTTION
-                },
-                cancel: function () {
-                    //close
-                },
-            },
-            onContentReady: function () {
-            }
-        }); //CONFIRM
+                      title: newTitle,
+                      content: phpContent,
+                      buttons: {
+                          formSubmit: {
+                              text: lang.commonCreateButton,
+                              btnClass: new_btn,
+                              action: function () {
+                                  var moduleID = $('#moduleID').val();
+                                  var name = $('#instance_name').val();
+                                  var $form = $('#token_data');
+                                  var data = {
+                                      moduleID: moduleID,
+                                      name: name
+                                  };
+                                  data = $form.serialize() + '&' + $.param(data);
+                                  $.ajax({
+                                             type: 'POST',
+                                             dataType: 'json',
+                                             url: modulePath + 'actions/add_gal.php',
+                                             data: data,
+                                             cache: false,
+                                             success: function (response) {
+                                                 showMessage('success', '', '');
+                                                 window.setTimeout(window.location.replace(response.load_new), 500);
+                                             },
+                                             error: function (data) {
+                                                 showMessage('error', '', '');
+                                             }
+                                         }); //AJAX
+                              } //CONFIRM ACTTION
+                          },
+                          cancel: function () {
+                              //close
+                          },
+                      },
+                      onContentReady: function () {
+                      }
+                  }); //CONFIRM
     });
     // /ADD NEW GALLERY
 
@@ -110,22 +111,21 @@ jQuery(document).ready(function ($) {
         };
         data = $form.serialize() + '&' + $.param(data);
         $.ajax({
-            type: "POST",
-            url: modulePath + 'actions/select_single_media.php',
-            data: data,
-            cache: false,
-            success: function (html) {
-                $("#media_info_block").remove();
-                $("#dynamic_media_siedebar_wrapper").prepend(html).fadeIn();
-            },
-            error: function (data) {
-                showMessage('error', '', '');
-            }
-        });
+                   type: "POST",
+                   url: modulePath + 'actions/select_single_media.php',
+                   data: data,
+                   cache: false,
+                   success: function (html) {
+                       $("#media_info_block").remove();
+                       $("#dynamic_media_siedebar_wrapper").prepend(html).fadeIn();
+                   },
+                   error: function (data) {
+                       showMessage('error', '', '');
+                   }
+               });
         return false;
     });
-    // /SELECT MEDIA FOR EDITING
-    //EDIT MEDIA
+    // /SELECT MEDIA FOR EDITING EDIT MEDIA
     $(document).on('click touchstart', '#submit_media_info button', function (event) {
         event.preventDefault();
         var moduleID = $('#moduleID').val();
@@ -135,17 +135,17 @@ jQuery(document).ready(function ($) {
         };
         data = $form.serialize() + '&' + $.param(data);
         $.ajax({
-            type: "POST",
-            url: modulePath + 'actions/submit_media_info.php',
-            data: data,
-            cache: false,
-            success: function (html) {
-                showMessage('success', '', '');
-            },
-            error: function (data) {
-                showMessage('error', '', '');
-            }
-        });
+                   type: "POST",
+                   url: modulePath + 'actions/submit_media_info.php',
+                   data: data,
+                   cache: false,
+                   success: function (html) {
+                       showMessage('success', '', '');
+                   },
+                   error: function (data) {
+                       showMessage('error', '', '');
+                   }
+               });
         return false;
     });
     // /EDIT MEDIA
@@ -154,6 +154,9 @@ jQuery(document).ready(function ($) {
     $(document).on('click touchstart', '.delete_media', function (event) {
         event.preventDefault();
         var gallery = $(this).attr('id');
+        var $form = $('#token_data');
+        var moduleID = $('#moduleID').val();
+
         if (gallery) {
             var new_title = lang.confirmRemoveTitle;
             var new_text = lang.confirmRemoveText;
@@ -167,53 +170,53 @@ jQuery(document).ready(function ($) {
         }
         var media_id = $(this).closest('.media_image').attr('data-id');
         $.confirm({
-            title: new_title,
-            content: new_content,
-            autoClose: 'cancelAction|8000',
-            icon: 'fa fa-warning',
-            type: new_type,
-            //'blue, green, red, orange, purple & dark'
-            escapeKey: true,
-            buttons: {
-                deleteUser: {
-                    text: new_text,
-                    action: function () {
-                        var moduleID = $('#moduleID').val();
-                        var $form = $('#token_data');
-                        var data = {
-                            moduleID: moduleID,
-                            media_id: media_id,
-                            if_gallery: gallery
-                        };
-                        data = $form.serialize() + '&' + $.param(data);
-                        $.ajax({
-                            type: "POST",
-                            url: modulePath + 'actions/delete_media.php',
-                            data: data,
-                            cache: false,
-                            success: function (html) {
-                                $('#add_into_specific').hide();
-                                $('#create_gallery_button').hide();
-                                $('#delete_selected_button').hide();
-                                $("#parentpic_" + media_id).fadeOut();
-                                $('.selected_img').each(function () {
-                                    $(this).removeClass('selected_img');
-                                });
-                                $('.media_selected').each(function () {
-                                    $(this).addClass('hidden');
-                                });
-                                showMessage('success', '', '');
-                            },
-                            error: function (data) {
-                                showMessage('error', '', '');
-                            }
-                        }); //ajax
-                    }
-                },
-                cancelAction: function () {
-                }
-            } //buttons
-        }); //confirm
+                      title: new_title,
+                      content: new_content,
+                      autoClose: 'cancelAction|8000',
+                      icon: 'fa fa-warning',
+                      type: new_type,
+                      //'blue, green, red, orange, purple & dark'
+                      escapeKey: true,
+                      buttons: {
+                          deleteUser: {
+                              text: new_text,
+                              action: function () {
+
+
+                                  var data = {
+                                      moduleID: moduleID,
+                                      media_id: media_id,
+                                      if_gallery: gallery
+                                  };
+                                  data = $form.serialize() + '&' + $.param(data);
+                                  $.ajax({
+                                             type: "POST",
+                                             url: modulePath + 'actions/delete_media.php',
+                                             data: data,
+                                             cache: false,
+                                             success: function (html) {
+                                                 $('#add_into_specific').hide();
+                                                 $('#create_gallery_button').hide();
+                                                 $('#delete_selected_button').hide();
+                                                 $("#parentpic_" + media_id).fadeOut();
+                                                 $('.selected_img').each(function () {
+                                                     $(this).removeClass('selected_img');
+                                                 });
+                                                 $('.media_selected').each(function () {
+                                                     $(this).addClass('hidden');
+                                                 });
+                                                 showMessage('success', '', '');
+                                             },
+                                             error: function (data) {
+                                                 showMessage('error', '', '');
+                                             }
+                                         }); //ajax
+                              }
+                          },
+                          cancelAction: function () {
+                          }
+                      } //buttons
+                  }); //confirm
     });
     // /DELETE MEDIA
 
@@ -223,53 +226,53 @@ jQuery(document).ready(function ($) {
         var newTitle = lang.confirmDeleteTitle;
         var newText = lang.confirmDeleteText;
         $.confirm({
-            title: newTitle,
-            content: lang.deleteSelectedMedia,
-            buttons: {
-                formSubmit: {
-                    text: lang.settDelButton,
-                    btnClass: 'btn-red',
-                    action: function () {
-                        var gal_name = this.$content.find('.name').val();
-                        var moduleID = $('#moduleID').val();
-                        var $form = $('#selected_items_form, #token_data');
-                        var data = {
-                            moduleID: moduleID,
-                        };
-                        data = $form.serialize() + '&' + $.param(data);
+                      title: newTitle,
+                      content: lang.deleteSelectedMedia,
+                      buttons: {
+                          formSubmit: {
+                              text: lang.settDelButton,
+                              btnClass: 'btn-red',
+                              action: function () {
+                                  var gal_name = this.$content.find('.name').val();
+                                  var moduleID = $('#moduleID').val();
+                                  var $form = $('#selected_items_form, #token_data');
+                                  var data = {
+                                      moduleID: moduleID,
+                                  };
+                                  data = $form.serialize() + '&' + $.param(data);
 
-                        $.ajax({
-                            type: "POST",
-                            // dataType: "json",
-                            url: modulePath + 'actions/delete_selected.php',
-                            data: data,
-                            cache: false,
-                            success: function (response) {
-                                showMessage('success', '', '');
+                                  $.ajax({
+                                             type: "POST",
+                                             // dataType: "json",
+                                             url: modulePath + 'actions/delete_selected.php',
+                                             data: data,
+                                             cache: false,
+                                             success: function (response) {
+                                                 showMessage('success', '', '');
 
-                                $('.selected_img').each(function () {
-                                    $(this).fadeOut();
-                                });
-                                $('#create_gallery_button').hide();
-                                $('#add_into_specific').hide();
-                                $('#delete_selected_button').hide();
-                                $('#submit_new_gallery').empty();
-                            },
-                            error: function (response) {
-                                showMessage('error', '', '');
-                            }
-                        }); //ajax
-                    } //actions
-                },
-                //formSubmit
-                cancel: function () {
-                    //close
-                },
-            },
-            //buttons
-            onContentReady: function () {
-            }
-        }); //confirm
+                                                 $('.selected_img').each(function () {
+                                                     $(this).fadeOut();
+                                                 });
+                                                 $('#create_gallery_button').hide();
+                                                 $('#add_into_specific').hide();
+                                                 $('#delete_selected_button').hide();
+                                                 $('#submit_new_gallery').empty();
+                                             },
+                                             error: function (response) {
+                                                 showMessage('error', '', '');
+                                             }
+                                         }); //ajax
+                              } //actions
+                          },
+                          //formSubmit
+                          cancel: function () {
+                              //close
+                          },
+                      },
+                      //buttons
+                      onContentReady: function () {
+                      }
+                  }); //confirm
     });
     // /DELETE ALL SELECTED
 
@@ -301,72 +304,71 @@ jQuery(document).ready(function ($) {
         }
         var gal_name;
         $.confirm({
-            title: newTitle,
-            content: newContent,
-            buttons: {
-                formSubmit: {
-                    text: lang.confirmSubmit,
-                    btnClass: new_btn,
-                    action: function () {
-                        var gal_name = this.$content.find('.name').val();
-                        if (!!!AddIntoGallery) {
-                            if (!gal_name) {
-                                $.alert(lang.ConfirmValidName);
-                                return false;
-                            }
-                        }
-                        var moduleID = $('#moduleID').val();
-                        var $form = $('#selected_items_form, #token_data');
-                        var data = {
-                            moduleID: moduleID,
-                            gallery_title: gal_name,
-                            add_into_gallery: AddIntoGallery
-                        };
-                        data = $form.serialize() + '&' + $.param(data);
+                      title: newTitle,
+                      content: newContent,
+                      buttons: {
+                          formSubmit: {
+                              text: lang.confirmSubmit,
+                              btnClass: new_btn,
+                              action: function () {
+                                  var gal_name = this.$content.find('.name').val();
+                                  if (!!!AddIntoGallery) {
+                                      if (!gal_name) {
+                                          $.alert(lang.ConfirmValidName);
+                                          return false;
+                                      }
+                                  }
+                                  var moduleID = $('#moduleID').val();
+                                  var $form = $('#selected_items_form, #token_data');
+                                  var data = {
+                                      moduleID: moduleID,
+                                      gallery_title: gal_name,
+                                      add_into_gallery: AddIntoGallery
+                                  };
+                                  data = $form.serialize() + '&' + $.param(data);
 
-                        $.ajax({
-                            type: "POST",
-                            dataType: "json",
-                            url: modulePath + 'actions/submit_new_gallery.php',
-                            data: data,
-                            cache: false,
-                            success: function (response) {
-                                if (response.message === 'err') {
-                                    showMessage('error', '', response.message, 2000);
-                                } else {
-                                    showMessage('success', '', '');
-                                }
-                                $('.media_selected').each(function () {
-                                    $(this).addClass('hidden');
-                                });
-                                $('.selected_img').each(function () {
-                                    $(this).removeClass('selected_img');
-                                });
-                                $('#create_gallery_button').hide();
-                                $('#add_into_specific').hide();
-                                $('#delete_selected_button').hide();
-                                $('#submit_new_gallery').empty();
-                                $.alert(response.message);
-                                window.setTimeout(window.location.replace(response.load_gallery_url), 500);
-                            },
-                            error: function (data) {
-                                showMessage('error', '', '');
-                            }
-                        }); //ajax
-                    } //actions
-                },
-                //formSubmit
-                cancel: function () {
-                    //close
-                },
-            },
-            //buttons
-            onContentReady: function () {
-            }
-        }); //confirm
+                                  $.ajax({
+                                             type: "POST",
+                                             dataType: "json",
+                                             url: modulePath + 'actions/submit_new_gallery.php',
+                                             data: data,
+                                             cache: false,
+                                             success: function (response) {
+                                                 if (response.message === 'err') {
+                                                     showMessage('error', '', response.message, 2000);
+                                                 } else {
+                                                     showMessage('success', '', '');
+                                                 }
+                                                 $('.media_selected').each(function () {
+                                                     $(this).addClass('hidden');
+                                                 });
+                                                 $('.selected_img').each(function () {
+                                                     $(this).removeClass('selected_img');
+                                                 });
+                                                 $('#create_gallery_button').hide();
+                                                 $('#add_into_specific').hide();
+                                                 $('#delete_selected_button').hide();
+                                                 $('#submit_new_gallery').empty();
+                                                 $.alert(response.message);
+                                                 window.setTimeout(window.location.replace(response.load_gallery_url), 500);
+                                             },
+                                             error: function (data) {
+                                                 showMessage('error', '', '');
+                                             }
+                                         }); //ajax
+                              } //actions
+                          },
+                          //formSubmit
+                          cancel: function () {
+                              //close
+                          },
+                      },
+                      //buttons
+                      onContentReady: function () {
+                      }
+                  }); //confirm
     });
-    // /CREATE MEDIA GALLERY
-    //SELECTING MEDIA
+    // /CREATE MEDIA GALLERY SELECTING MEDIA
     $(document).on('click touchstart', '.media_image', function (event) {
         event.preventDefault();
         $(this).closest('.thumbnail').toggleClass('selected_img');
@@ -398,22 +400,22 @@ jQuery(document).ready(function ($) {
     var cpass = $('input[name=cpass]').val();
     var rdts = $('input[name=rdts]').val();
     $(".dropzone").dropzone({
-        url: modulePath + 'actions/upload_media.php',
-        params: {
-            moduleID: moduleID,
-            userID: userID,
-            token: token,
-            cpass: cpass,
-            rdts: rdts
-        },
-        success: function (file, responseText) {
-            var response = JSON.parse(responseText);
-            var ImgSrc = response.filesrc;
-            d = new Date();
-            $(".art_img_admin").css('display', 'none');
-            $(response.thumb).insertAfter("#media_wrapper_tagline");
-        }
-    });
+                                url: modulePath + 'actions/upload_media.php',
+                                params: {
+                                    moduleID: moduleID,
+                                    userID: userID,
+                                    token: token,
+                                    cpass: cpass,
+                                    rdts: rdts
+                                },
+                                success: function (file, responseText) {
+                                    var response = JSON.parse(responseText);
+                                    var ImgSrc = response.filesrc;
+                                    d = new Date();
+                                    $(".art_img_admin").css('display', 'none');
+                                    $(response.thumb).insertAfter("#media_wrapper_tagline");
+                                }
+                            });
     //MEDIA URL copy to clipboard
     $(document).on('click touchstart', '#copyToClipboard', function (event) {
         event.preventDefault();

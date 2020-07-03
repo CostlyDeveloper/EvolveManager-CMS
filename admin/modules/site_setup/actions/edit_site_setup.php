@@ -9,7 +9,7 @@ evolveAllow($_POST['userID'], $_POST['moduleID'], true);//Second check
 
 if (isset($_POST['instanceID'])) {
   $instance_id           = $mysqli->real_escape_string($_POST['instanceID']);
-  $admin_domain          = $mysqli->real_escape_string($_POST['admin_domain']);
+  // $admin_domain          = $mysqli->real_escape_string($_POST['admin_domain']);
   $header_script         = $mysqli->real_escape_string($_POST['header_script']);
   $footer_script         = $mysqli->real_escape_string($_POST['footer_script']);
   $facebook              = $mysqli->real_escape_string($_POST['facebook']);

@@ -75,7 +75,7 @@
     <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="vendors/datatables.net/js/dataTables.bootstrap.min.js"></script>
 <?php } ?>
-
+<!--um-->
 <?php if (allow_if_module_is_loaded('site_setup')) {//<!-- SITE SETUP -->?>
     <!-- TinyMCE -->
     <script src="vendors/tinymce/tinymce.min.js"></script>

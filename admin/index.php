@@ -114,7 +114,7 @@ if (evolveLogged()) {
 <!-- sortable -->
 <script src="vendors/jquery-ui/jquery-ui.js"></script>
 
-<?php include(ADMIN_PATH . '/construction/get_vendor_scripts.php'); //Get Variables scripts
+<?php include(ADMIN_PATH . './construction/get_vendor_scripts.php'); //Get Variables scripts
 ?>
 
 <!-- EVOLVE Scripts -->

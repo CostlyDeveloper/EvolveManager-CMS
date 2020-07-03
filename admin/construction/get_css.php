@@ -45,7 +45,7 @@
 <?php } ?>
 
 <!-- USER GROUPS -->
-<?php if (allow_if_module_is_loaded('user_groups')) { ?>
+<?php if (allow_if_module_is_loaded('site_setup')) { ?>
     <!-- Datatables -->
     <link href="vendors/datatables.net/css/dataTables.bootstrap.min.css" rel="stylesheet" />
 <?php } ?>

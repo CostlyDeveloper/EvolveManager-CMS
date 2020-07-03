@@ -9,24 +9,26 @@ function encrypt($d)
 
 function allow_if_module_is_loaded($slug = 0)
 {
-    global $mysqli;
-    $slug = '"' . $slug . '"';
+
+    global $mysqli, $developing;
+
+    // if($developing) pr(array_keys($_GET)[0]);
+    // $slug = '"' . $slug . '"';
     $query = $mysqli->query("
     SELECT evolve_modules.id, evolve_modules.name, evolve_modules.get_var 
        FROM evolve_modules
-       WHERE slug = $slug
+       WHERE slug = '$slug'
   ");
+
 
     if ($query->num_rows > 0) {
         $mod = $query->fetch_array(MYSQLI_ASSOC);
         $get_var_list = $mod['get_var'];
-        $get_var_list = str_replace('"', '', $get_var_list);
-        $get_var_list = substr($get_var_list, 1, -1);
-        $get_var_list = explode(",", $get_var_list);
+        $get_var_list = json_decode( $get_var_list, true ); ;
 
-        foreach ($get_var_list as $get_var) {
-
-            if (isset($_GET[$get_var])) {
+       foreach ($get_var_list as $get_var) {
+                $prevent_slash = (substr($get_var, 0, -1));
+            if (isset($_GET[$get_var]) || isset($_GET[$prevent_slash])) {
                 return true;
             }
         }

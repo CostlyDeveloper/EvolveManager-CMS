@@ -1,11 +1,10 @@
-var $ = jQuery.noConflict();
+const $ = jQuery.noConflict();
 jQuery(document).ready(function ($) {
-    //MODULE PATH
-    var modulep = 'articles';
-    var modulePath = 'modules/' + modulep + '/';
-    var commonScripts = 'modules/_commonScripts/';
-    // /modulePath
-    //ENABLE / DISABLE PUBLISH SWITCH
+
+    const  modulep = 'articles';
+    const modulePath = 'modules/' + modulep + '/';
+
+    // region *** ENABLE / DISABLE PUBLISH SWITCH ***
     // Switchery
     if ($("#activate_schedule").length) {
         $('#activate_schedule').iCheck('enable');
@@ -20,7 +19,7 @@ jQuery(document).ready(function ($) {
         $('#sch_cal_ico').fadeIn();
         var schedule = 0;
         var articleID = $('input[name=articleID]').val();
-        var artSchedule = $('input[name=art_schedule').val();
+        var artSchedule = $('input[name=art_schedule]').val();
         $.ajax({
             type: 'POST',
             url: modulePath + 'actions/schedule.php',
@@ -60,22 +59,23 @@ jQuery(document).ready(function ($) {
         });
         return false;
     });
-    // /ENABLE / DISABLE PUBLISH SWITCH
-    //PUBLISH SWITCH - SHOW/HIDE SCHEDULER
+    // endregion // ENABLE / DISABLE PUBLISH SWITCH //
+
+    // region *** HOW/HIDE SCHEDULER ***
     $('.publish_switch').change(function (e) {
         e.preventDefault();
+        let published = 0;
+        const articleID = $(this).attr('data-id');
+
         if ($(this).prop('checked')) {
-            var published = 1;
-        } else {
-            var published = 0;
+            published = 1;
         }
-        var articleID = $(this).attr('data-id');
         if (document.getElementById('schedule_parent')) {
             $('#schedule_parent').fadeToggle("slow", "linear");
         }
-        var moduleID = $('#moduleID').val();
-        var $form = $('#token_data');
-        var data = {
+        const moduleID = $('#moduleID').val();
+        const $form = $('#token_data');
+        let data = {
             moduleID: moduleID,
             articleID: articleID,
             published: published
@@ -94,8 +94,9 @@ jQuery(document).ready(function ($) {
         });
         return false;
     });
-    // /PUBLISH SWITCH - SHOW/HIDE SCHEDULER
-    //EDIT RUBRIC
+    // endregion // SHOW/HIDE SCHEDULER //
+
+    // region *** EDIT RUBRIC ***
     $(document).on('submit', '#edit_rubric_form', function () {
         var formDetails = $('#edit_rubric_form, #token_data');
         $.ajax({
@@ -115,8 +116,9 @@ jQuery(document).ready(function ($) {
         });
         return false;
     });
-    // /EDIT RUBRIC
-    //NEW RUBRIC
+    // endregion // EDIT RUBRIC //
+
+    // region *** CREATE RUBRIC ***
     $(document).on('click touchstart', '#add_new_art_rubric', function (event) {
         event.preventDefault();
         var $form = $('#token_data');
@@ -140,8 +142,9 @@ jQuery(document).ready(function ($) {
             }
         }); //ajax
     });
-    // /NEW RUBRIC
-    //EDIT ARTICLE
+    // endregion // CREATE RUBRIC //
+
+    // region *** EDIT ARTICLE ***
     $(document).on('submit', '#edit_article_form', function () {
         var formDetails = $('#edit_article_form, #token_data');
         $.ajax({
@@ -164,8 +167,9 @@ jQuery(document).ready(function ($) {
         });
         return false;
     });
-    // /EDIT ARTICLE
-    //CREATE NEW ARTICLE
+    // endregion // EDIT ARTICLE //
+
+    // region *** CREATE ARTICLE ***
     $(document).on('click touchstart', '#add_new_article', function (event) {
         event.preventDefault();
         var new_btn = 'btn-blue';
@@ -223,8 +227,9 @@ jQuery(document).ready(function ($) {
             }
         }); //confirm
     });
-    // /CREATE NEW ARTICLE
-    //ARTICLE LIST
+    // endregion // CREATE ARTICLE //
+
+    // region *** ARTICLE LIST ***
     $('#datatable-responsive').DataTable({
         //ajax: "js/datatables/json/scroller-demo.json",
         responsive: false,
@@ -253,20 +258,24 @@ jQuery(document).ready(function ($) {
             "orderable": false
         }]
     });
-    // /ARTICLE LIST
-    //DATEPICKERS
+    // endregion // ARTICLE LIST //
+
+    // region *** DATEPICKERS ***
     $('#datetimepicker_article_publishing').datetimepicker({
         format: 'DD.MM.YYYY. HH:mm'
     });
+
     $('#art_schedule').datetimepicker({
         format: 'DD.MM.YYYY. HH:mm'
     });
-    // /DATEPICKERS
-    //SEO ID
+    // endregion // DATEPICKERS //
+
+    // region *** SEO ID ***
     $('.seoid').blur(function () {
         if (!$.trim(this.value).length) { // zero-length string AFTER a trim
             $(this).addClass('parsley-error');
         }
     });
-    // /SEO ID
+    // endregion // SEO ID //
+
 }); //document ready
