@@ -1,28 +1,37 @@
-<header role="banner" id="fh5co-header">
+<!-- BEGIN TOP BAR -->
+<div class="pre-header">
     <div class="container">
-        <!-- <div class="row"> -->
-        <nav class="navbar navbar-default">
-            <div class="navbar-header">
-                <!-- Mobile Toggle Menu Button -->
-                <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar"
-                   aria-expanded="false" aria-controls="navbar"><i></i></a>
-                <?php if($data['logo_img']){
-                $imgsrc = FRONTEND_URL.module_media_folder(11).'/'.$data['logo_img'];?>
-                <a class="site-logo" href="<?php echo FRONTEND_URL; ?>"><img src="<?php echo $imgsrc; ?>" alt="<?php echo lang('site_title'); ?>"/></a>
+        <div class="row top-block-line">
+
+            <!-- BEGIN TOP BAR LEFT PART -->
+
+            <div class="col-md-6 col-sm-6 additional-shop-info">
+                <?php if ($data['company_tel'] || $data['company_email']) { ?>
+                    <ul class="list-unstyled list-inline">
+                        <?php if ($data['company_tel']) { ?>
+                            <li><i class="fa fa-phone"></i><span><?php echo $data['company_tel'] ?></span>
+                            </li><?php } ?>
+                        <?php if ($data['company_email']) { ?>
+                            <li><i class="fa fa-envelope-o"></i><span><?php echo $data['company_email'] ?></span>
+                            </li><?php } ?>
+                    </ul>
                 <?php } ?>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <?php /*echo get_menu(1) */?>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
-                    <li><a href="#" data-nav-section="work"><span>Work</span></a></li>
-                    <li><a href="#" data-nav-section="testimonials"><span>Testimonials</span></a></li>
-                    <li><a href="#" data-nav-section="services"><span>Services</span></a></li>
-                    <li><a href="#" data-nav-section="about"><span>About</span></a></li>
-                    <li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
-                </ul>
+            <!-- END TOP BAR LEFT PART -->
+            <!-- BEGIN TOP BAR MENU -->
+            <div class="col-md-6 col-sm-6 additional-nav">
+                <?php if (evolveLogged()) { ?>
+                    <ul class="list-unstyled list-inline pull-right user-profile">
+                        <li>
+
+                            <?php lang('wellcome') ?>, <?php echo $first_name ?>
+
+                        </li>
+                    </ul>
+                <?php } ?>
             </div>
-        </nav>
-        <!-- </div> -->
+            <!-- END TOP BAR MENU -->
+        </div>
     </div>
-</header>
+</div>
+<!-- END TOP BAR -->

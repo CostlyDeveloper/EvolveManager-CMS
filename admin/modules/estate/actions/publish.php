@@ -11,13 +11,13 @@ if (isset($_POST['itemID'])) {
   //ITEM INFO
 
   //Checkboxed    
-  if (($_POST['is_legal']) == 1) {
-    $is_legal = 1;} else{ $is_legal = 0; }
+  if (($_POST['published']) == 1) {
+    $published = 1;} else{ $published = 0; }
 
     $sql = $mysqli->query("     
-        UPDATE evolve_cd_cody_licences
+        UPDATE evolve_estate_rooms
         SET 
-        is_legal             = '$is_legal'
+        published             = '$published'
         WHERE id = '$item_id' ");
     // if(!$sql) print_r($mysqli->error);
         

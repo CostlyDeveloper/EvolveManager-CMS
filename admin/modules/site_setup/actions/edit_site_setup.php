@@ -29,8 +29,6 @@ if (isset($_POST['instanceID'])) {
   $company_email         = $mysqli->real_escape_string($_POST['company_email']);
   $company_tel           = $mysqli->real_escape_string($_POST['company_tel']);
   $home_custom_box1      = $mysqli->real_escape_string($_POST['home_custom_box1']);
-  
-
 
 
    $sql = $mysqli->query("     
@@ -60,7 +58,7 @@ if (isset($_POST['instanceID'])) {
         
         WHERE id     = '$instance_id' ");
    
-  //if(!$sql) print_r($mysqli->error);    
+  if(!$sql) print_r($mysqli->error);
 
  
  } //END

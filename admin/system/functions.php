@@ -1,4 +1,16 @@
 <?php /** Cody ENC **/
+
+function get_evolve_caching_suffix()
+{
+    global $developing, $ver;
+    if ($developing) {
+        $date = new DateTime();
+        return $date->getTimestamp();
+    } else {
+        return $ver;
+    }
+}
+
 function encrypt($d)
 {
     global $encryption;

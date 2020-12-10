@@ -25,6 +25,18 @@ $get_cd_cody_list = $mysqli->query("
   
       ");
 
+$get_estate_list = $mysqli->query("
+      SELECT evolve_estate_list.*, evolve_estate_data.*, 
+        evolve_estate_data.title as estate_title,
+        evolve_estate_list.id as estate_id
+        
+      FROM evolve_estate_list
+      
+      LEFT JOIN evolve_estate_data
+      ON evolve_estate_data.for_instance = evolve_estate_list.id
+        AND evolve_estate_data.lang =  '$default_language'
+  
+      ");
 $get_shop_list = $mysqli->query("
       SELECT evolve_product_category.*, evolve_product_category_data.*, 
         evolve_product_category_data.title as shop_title,
@@ -156,13 +168,13 @@ $get_shop_list = $mysqli->query("
                     <a><i class="fa fa-bed"></i> <?php echo $lang['menu_evolve_estate']; ?> <span
                                 class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                        <?php while ($cody_CD_module = $get_cd_cody_list->fetch_assoc()) { ?>
+                        <?php while ($estate = $get_estate_list->fetch_assoc()) { ?>
                             <li>
-                                <a href="index.php?cd_cody_licence_list=<?php echo $cody_CD_module['estate_id']; ?>"><?php echo $cody_CD_module['estate_title']; ?></a>
+                                <a href="index.php?room_list=<?php echo $estate['estate_id']; ?>"><?php echo $estate['estate_title']; ?></a>
                             </li>
                         <?php } ?>
                         <li class="divider-dashed"></li>
-                        <li><a href="index.php?estate"><?php echo $lang['menu_cd_cody_list']; ?></a></li>
+                        <li><a href="index.php?estate"><?php echo $lang['menu_estate_list']; ?></a></li>
                     </ul>
                 </li>
             <?php } ?>

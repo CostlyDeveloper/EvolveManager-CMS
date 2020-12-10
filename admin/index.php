@@ -40,7 +40,7 @@ if (evolveLogged()) {
     <link href="vendors/jquery-confirm-master/dist/jquery-confirm.min.css" rel="stylesheet"/>
 
     <!-- Evolve Style -->
-    <link href="build/css/evolve<?php echo $min ?>.css?<?php echo $ver ?>" rel="stylesheet"/>
+    <link href="build/css/evolve<?php echo $min ?>.css?<?php echo get_evolve_caching_suffix(); ?>" rel="stylesheet"/>
 
 
     <?php include(ADMIN_PATH . '/construction/get_css.php'); //Get CSS
@@ -118,9 +118,9 @@ if (evolveLogged()) {
 ?>
 
 <!-- EVOLVE Scripts -->
-<script src="language/language.js?<?php echo $ver ?>"></script>
-<script src="build/js/evolve-general<?php echo $min ?>.js?<?php echo $ver ?>"></script>
-<script src="modules/_commonScripts/js/common.js?<?php echo $ver ?>"></script>
+<script src="language/language.js?<?php echo get_evolve_caching_suffix(); ?>"></script>
+<script src="build/js/evolve-general<?php echo $min ?>.js?<?php echo get_evolve_caching_suffix(); ?>"></script>
+<script src="modules/_commonScripts/js/common.js?<?php echo get_evolve_caching_suffix(); ?>"></script>
 
 <?php include(ADMIN_PATH . '/construction/get_scripts.php'); //Get Variables scripts
 ?>

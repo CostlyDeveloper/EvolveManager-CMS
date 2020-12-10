@@ -3,12 +3,12 @@
   require_once("../../../../system/config.php");
   
     $get_item_category = $mysqli->query("
-      SELECT evolve_cd_cody_list.id, evolve_cd_cody_data.title
-      FROM evolve_cd_cody_list
+      SELECT evolve_estate_list.id, evolve_estate_data.title
+      FROM evolve_estate_list
       
-      LEFT JOIN evolve_cd_cody_data
-      ON evolve_cd_cody_data.for_instance = evolve_cd_cody_list.id
-        AND evolve_cd_cody_data.lang =  '$default_language' 
+      LEFT JOIN evolve_estate_data
+      ON evolve_estate_data.for_instance = evolve_estate_list.id
+        AND evolve_estate_data.lang =  '$default_language' 
       ");
       //if(!$get_item_category) print_r($mysqli->error);
      

@@ -19,7 +19,7 @@ function initColorPicker(_ModulePath) {
                     $('.colorpicker').colorpicker();
                 }
             });
-        } else {
+        }else{
             console.log($(colorDomItem).first());
             $(colorDomItem).first().clone().prependTo('#color_dragable');
 
@@ -57,11 +57,11 @@ function initPublishSwitch(_ModulePath) {
     //PUBLISH SWITCH - SHOW/HIDE SCHEDULER
     $('.publish_switch').change(function (e) {
         e.preventDefault();
-        let is_legal;
+        let published;
         if ($(this).prop('checked')) {
-            is_legal = 1;
+            published = 1;
         } else {
-            is_legal = 0;
+            published = 0;
         }
         const itemID = $(this).attr('data-id');
         var moduleID = $('#moduleID').val();
@@ -69,7 +69,7 @@ function initPublishSwitch(_ModulePath) {
         var data = {
             moduleID: moduleID,
             itemID: itemID,
-            is_legal: is_legal
+            published: published
         };
         data = $form.serialize() + '&' + $.param(data);
         $.ajax({
@@ -137,7 +137,6 @@ function initDatepicker(_ElementID, _Format) {
 
 function initCreateNewItem(_ModulePath, _ItemName) {
     $(document).on('click touchstart', '#add_new_' + _ItemName + '', function (event) {
-        console.log('123');
         event.preventDefault();
         var new_btn = 'btn-blue';
         var newTitle = lang.commonCreateNew;
@@ -217,7 +216,6 @@ function initEditItem(_ModulePath, _ItemName) {
                 }
             },
             error: function (data) {
-
                 showMessage('error', '', '');
             }
         });
@@ -227,7 +225,7 @@ function initEditItem(_ModulePath, _ItemName) {
 
 function initEditCategory(_ModulePath, _Category) {
     $(document).on('submit', '#edit_' + _Category, function () {
-        var formDetails = $('#edit_' + _Category + ', #token_data');
+        var formDetails = $('#edit_' + _Category +', #token_data');
         $.ajax({
             type: 'POST',
             dataType: 'json',
@@ -262,7 +260,7 @@ function initNawCategory(_ModulePath) {
         $.ajax({
             type: 'POST',
             dataType: 'json',
-            url: _ModulePath + 'actions/estate.php',
+            url: _ModulePath + 'actions/add_product_cateory.php',
             data: data,
             cache: false,
             success: function (response) {

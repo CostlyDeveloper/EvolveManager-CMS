@@ -209,20 +209,21 @@ elseif (isset($_GET["estate"])) {
         }
     }
 } //ROOM
-elseif (isset($_GET["cd_cody_licence_edit"])) {
-    $module_id = find_module('cd_cody_licence_edit')['id'];
-    if (evolveAllow($data_user_id, $module_id)) {
-        if (is_numeric($_GET["cd_cody_licence_edit"])) {
-            $instance_id = $_GET["cd_cody_licence_edit"];
-            include(ADMIN_PATH . '/modules/estate/pages/cd_cody_licence_edit.php');
+elseif(isset($_GET["room"])){
+    $module_id = find_module('room')['id'];
+    if (evolveAllow($data_user_id, $module_id)){
+        if(is_numeric($_GET["room"])){
+            $instance_id = $_GET["room"];
+            include(ADMIN_PATH.'/modules/estate/pages/room.php');
         }
     }
-} //cd_cody_licence_edit LIST
-elseif (isset($_GET["cd_cody_licence_list"]) && is_numeric($_GET["cd_cody_licence_list"])) {
-    $module_id = find_module('cd_cody_licence_list')['id'];
-    if (evolveAllow($data_user_id, $module_id)) {
-        $instance_id = $_GET["cd_cody_licence_list"];
-        include(ADMIN_PATH . '/modules/estate/pages/cd_cody_licence_list.php');
+}
+//ROOM LIST
+elseif(isset($_GET["room_list"]) && is_numeric($_GET["room_list"])){
+    $module_id = find_module('room_list')['id'];
+    if (evolveAllow($data_user_id, $module_id)){
+        $instance_id = $_GET["room_list"];
+        include(ADMIN_PATH.'/modules/estate/pages/room_list.php');
     }
 }
 /*  /ESTATE  */
@@ -283,6 +284,22 @@ elseif (isset($_GET["webcam"])) {
         }
     }
 }
+/*elseif (isset($_GET["cd_cody_licence_edit"])) {
+    $module_id = find_module('cd_cody_licence_edit')['id'];
+    if (evolveAllow($data_user_id, $module_id)) {
+        if (is_numeric($_GET["cd_cody_licence_edit"])) {
+            $instance_id = $_GET["cd_cody_licence_edit"];
+            include(ADMIN_PATH . '/modules/estate/pages/cd_cody_licence_edit.php');
+        }
+    }
+} //cd_cody_licence_edit LIST
+elseif (isset($_GET["cd_cody_licence_list"]) && is_numeric($_GET["cd_cody_licence_list"])) {
+    $module_id = find_module('cd_cody_licence_list')['id'];
+    if (evolveAllow($data_user_id, $module_id)) {
+        $instance_id = $_GET["cd_cody_licence_list"];
+        include(ADMIN_PATH . '/modules/estate/pages/cd_cody_licence_list.php');
+    }
+}*/
 elseif (isset($_GET["profile"])) {
     include(ADMIN_PATH . '/system/profile/pages/profile.php');
 }

@@ -1,4 +1,5 @@
 <?php
+
 function article_type($category)
 {
     global $mysqli;

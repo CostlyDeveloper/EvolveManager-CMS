@@ -1,0 +1,1 @@
+<div class="embed-container"><iframe style="border: 0;" src="https://www.whatsupcams.com/wgt/<?php echo $webcam['stream_id'] ?>" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div>

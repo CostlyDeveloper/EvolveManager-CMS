@@ -1,102 +1,97 @@
 <?php
 /**
  *
- CUSTOM - below - does not need to be translated!
+ * CUSTOM - below - does not need to be translated!
  *
  **/
 
-$lang['home_custom_box1']  = 'Box above stream HOMEPAGE';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
+$lang['home_custom_box1'] = 'Box above stream HOMEPAGE';
+$lang['']                 = '';
+$lang['']                 = '';
+$lang['']                 = '';
+$lang['']                 = '';
+$lang['']                 = '';
 
 
 //COMMON
-$lang['button_edit']        = 'Edit';
-$lang['button_show_items']  = 'Show items';
-$lang['button_delete']      = 'Delete';
-$lang['button_submit']      = 'Submit';
-$lang['button_add_new']     = 'Add new';
-$lang['button_category']    = 'category';
-$lang['seo_id']             = 'Seo ID';
-$lang['tagline']            = 'Tagline';
-$lang['description']        = 'Description';
-$lang['tags']               = 'Tags';
-$lang['pagination']         = 'Number of items per page';
+$lang['button_edit']       = 'Edit';
+$lang['button_show_items'] = 'Show items';
+$lang['button_delete']     = 'Delete';
+$lang['button_submit']     = 'Submit';
+$lang['button_add_new']    = 'Add new';
+$lang['button_category']   = 'category';
+$lang['seo_id']            = 'Seo ID';
+$lang['tagline']           = 'Tagline';
+$lang['description']       = 'Description';
+$lang['tags']              = 'Tags';
+$lang['pagination']        = 'Number of items per page';
 
-$lang['alert_missing']      = 'Missing';
-$lang['alert_seo_id']       = 'SEO-ID is missing';
+$lang['alert_missing'] = 'Missing';
+$lang['alert_seo_id']  = 'SEO-ID is missing';
 
-$lang['delete_img_button']  = 'Delete Image';
-$lang['notice_unsaved']     = 'Unsaved';
-$lang['switch_publish']     = 'Publish';
-$lang['switch_published']   = 'Published';
+$lang['delete_img_button'] = 'Delete Image';
+$lang['notice_unsaved']    = 'Unsaved';
+$lang['switch_publish']    = 'Publish';
+$lang['switch_published']  = 'Published';
 
-$lang['edit_title']         = '#Edit';
-$lang['gallery_add']        = 'Add gallery';
-$lang['gallery_select']     = 'Select gallery';
+$lang['edit_title']     = '#Edit';
+$lang['gallery_add']    = 'Add gallery';
+$lang['gallery_select'] = 'Select gallery';
 
-$lang['cover_img_delete']   = 'Delete image';
-$lang['cover_img_show']     = 'Show cover photo';
-$lang['cover_img_select']   = 'Select Image';
+$lang['cover_img_delete'] = 'Delete image';
+$lang['cover_img_show']   = 'Show cover photo';
+$lang['cover_img_select'] = 'Select Image';
 
-$lang['tooltip_videos_nr']  = 'Number of videos added to insrtance';
-$lang['tooltip_gal_items']  = 'Number of items in the gallery';
-$lang['tooltip_promoted']   = 'Promoted';
-$lang['tooltip_featured']   = 'Featured';
-$lang['tooltip_history']    = 'History';
+$lang['tooltip_videos_nr'] = 'Number of videos added to insrtance';
+$lang['tooltip_gal_items'] = 'Number of items in the gallery';
+$lang['tooltip_promoted']  = 'Promoted';
+$lang['tooltip_featured']  = 'Featured';
+$lang['tooltip_history']   = 'History';
 
-$lang['select_img']         = 'Select Image';
-$lang['please_make_dim']    = 'Please make at least one dimension rule first for this module.';
-$lang['set_dimensions_dd']  = 'Image Dimensions';
-$lang['add_title']          = 'title';
+$lang['select_img']        = 'Select Image';
+$lang['please_make_dim']   = 'Please make at least one dimension rule first for this module.';
+$lang['set_dimensions_dd'] = 'Image Dimensions';
+$lang['add_title']         = 'title';
 
-$lang['block_options']      = 'Options';
-$lang['upload_on_fly_btn']  = 'Choose from device';
-$lang['media_library_fly']  = 'Select image from media library:';
+$lang['block_options']     = 'Options';
+$lang['upload_on_fly_btn'] = 'Choose from device';
+$lang['media_library_fly'] = 'Select image from media library:';
 
-$lang['publishing_date']    = 'Publishing date / time';
-$lang['author']             = 'Author';
+$lang['publishing_date'] = 'Publishing date / time';
+$lang['author']          = 'Author';
 
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
+$lang[''] = '';
+$lang[''] = '';
+$lang[''] = '';
+$lang[''] = '';
 
 /**
  *
- ADMIN - below - does not need to be translated!
+ * ADMIN - below - does not need to be translated!
  *
  **/
 
 //TESTIMONIALS
-$lang['menu_testimonial']   = 'Testimonials';
-$lang['testimonials_title'] = 'Testimonials';
-$lang['testimonial_editing']= 'Editing Testimonial';
-$lang['person_name']        = 'Person name';
-$lang['job_title']          = 'Job title';
-$lang['occupation']         = 'Occupation';
-$lang['city']               = 'City';
+$lang['menu_testimonial']     = 'Testimonials';
+$lang['testimonials_title']   = 'Testimonials';
+$lang['testimonial_editing']  = 'Editing Testimonial';
+$lang['person_name']          = 'Person name';
+$lang['job_title']            = 'Job title';
+$lang['occupation']           = 'Occupation';
+$lang['city']                 = 'City';
 $lang['testimonial_web_name'] = 'Web name';
-$lang['testimonial_web_url'] = 'Web URL';
-$lang['testimonial_rating'] = 'Rating';
-$lang['testimonial_message']= 'Testimonial Message';
+$lang['testimonial_web_url']  = 'Web URL';
+$lang['testimonial_rating']   = 'Rating';
+$lang['testimonial_message']  = 'Testimonial Message';
 
 //ESTATE
-$lang['menu_evolve_estate']      = 'Estate';
-$lang['menu_cd_cody_list']        = 'Estate List';
-
-
+$lang['menu_evolve_estate']     = 'Estate';
+$lang['menu_estate_list']       = 'Estate List';
 $lang['estate_title']           = 'Products';
 $lang['estate']                 = 'estate';
-$lang['cd_cody_licence_edit']                   = 'Room / Apartment';
+$lang['room']                   = 'Room / Apartment';
 $lang['estate_name']            = 'Name';
-
-
 $lang['estate_room_editing']    = 'Edit  Room / Apartment';
-
 $lang['estate_colors']          = 'Add colors';
 $lang['estate_add_multi_color'] = 'Add color';
 $lang['estate_color_name']      = 'Set color name';
@@ -104,10 +99,10 @@ $lang['estate_activate_colors'] = 'Activate colors';
 $lang['estate_author']          = 'Created by';
 $lang['estate_created']         = 'Created';
 $lang['estate_edit']            = '#edit';
-$lang['estate_cd_cody_licence_list_title'] = 'Apartments List';
+$lang['estate_room_list_title'] = 'Apartments List';
 $lang['estate_list']            = ' Estates';
 $lang['estate_name']            = 'Name';
-$lang['estate_token']           = 'Token';
+$lang['estate_tagline']         = 'Tagline';
 $lang['estate_seoid']           = 'SEO_ID';
 $lang['estate_title']           = 'Title';
 $lang['estate_seo_tt']          = 'Required field';
@@ -118,17 +113,17 @@ $lang['estate_options']         = 'Product options';
 $lang['estate_featured']        = 'Featured';
 $lang['estate_promoted']        = 'Promoted';
 $lang['estate_price']           = 'Price';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
+$lang['']                       = '';
+$lang['']                       = '';
+$lang['']                       = '';
+$lang['']                       = '';
+$lang['']                       = '';
+$lang['']                       = '';
+$lang['']                       = '';
+$lang['']                       = '';
+$lang['']                       = '';
+$lang['']                       = '';
+$lang['']                       = '';
 
 
 //SHOP
@@ -162,8 +157,8 @@ $lang['']                        = '';
 
 
 //TOP TEN
-$lang['menu_evolve_topten']      = 'Top 10';
-$lang['menu_tt_item_category']   = 'Top 10 categories';
+$lang['menu_evolve_topten']          = 'Top 10';
+$lang['menu_tt_item_category']       = 'Top 10 categories';
 $lang['topten_title']                = 'Top 10 categories';
 $lang['topten_item']                 = 'topten_item';
 $lang['topten_item_name']            = 'Name';
@@ -174,7 +169,7 @@ $lang['topten_item_editing']         = 'Edit';
 $lang['topten_item_tagline']         = 'Tagline';
 $lang['topten_item_seoid']           = 'SEO_ID';
 $lang['topten_item_title']           = 'Title';
-$lang['topten_seo_tt']          = 'Required field';
+$lang['topten_seo_tt']               = 'Required field';
 $lang['topten_item_description']     = 'Product description';
 $lang['topten_item_content']         = 'Product content';
 $lang['topten_item_tags']            = 'Tags';
@@ -187,61 +182,60 @@ $lang['topten_item_add_multi_color'] = 'Add color';
 $lang['topten_item_color_name']      = 'Set color name';
 $lang['topten_item_activate_colors'] = 'Activate colors';
 $lang['topten_item_list_title']      = 'Product List';
-$lang['topten_item_categories']           = ' Categories';
-$lang['']                        = '';
-
+$lang['topten_item_categories']      = ' Categories';
+$lang['']                            = '';
 
 
 //SOCIAL
-$lang['social_menu']        = 'Profile';
-$lang['s_edit_profile']     = 'Edit Profile';
-$lang['pro_profile_title']  = 'Profile';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
+$lang['social_menu']       = 'Profile';
+$lang['s_edit_profile']    = 'Edit Profile';
+$lang['pro_profile_title'] = 'Profile';
+$lang['']                  = '';
+$lang['']                  = '';
+$lang['']                  = '';
+$lang['']                  = '';
+$lang['']                  = '';
+$lang['']                  = '';
 
 
 //ADS
-$lang['ads_title']          = 'Manage ads';
-$lang['ads_position']       = 'Position';
-$lang['ad_name']            = 'Ad name';
-$lang['add_ad_name']        = 'Name';
-$lang['select_position']    = 'Select Ad position';
-$lang['ad_content']         = 'AD content | HTML is allowed';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
+$lang['ads_title']       = 'Manage ads';
+$lang['ads_position']    = 'Position';
+$lang['ad_name']         = 'Ad name';
+$lang['add_ad_name']     = 'Name';
+$lang['select_position'] = 'Select Ad position';
+$lang['ad_content']      = 'AD content | HTML is allowed';
+$lang['']                = '';
+$lang['']                = '';
+$lang['']                = '';
+$lang['']                = '';
+$lang['']                = '';
+$lang['']                = '';
+$lang['']                = '';
+$lang['']                = '';
 
 
 //SITE SETUP
-$lang['site_setup']         = 'Site general setup';
-$lang['ss_tab_seo']         = 'SEO';
-$lang['ss_tab_social']         = 'Social Networks';
-$lang['ss_tab_settings']    = 'Settings';
-$lang['ss_tab_blocks']      = 'Blocks';
-$lang['ss_tab_frontend_home']  = 'Homepage';
-$lang['admin_domain']       = 'Admin domain';
-$lang['header_script']      = 'Header script';
-$lang['footer_script']      = 'Footer script';
-$lang['block_scripts']      = 'Global Scripts';
-$lang['block_social']       = 'Social Networks';
-$lang['facebook']           = 'Facebook';
-$lang['twitter']            = 'Twitter';
-$lang['youtube']            = 'Youtube';
-$lang['instagram']          = 'Instagram';
-$lang['googleplus']         = 'Google Plus';
-$lang['dribbble']           = 'Dribbble';
-$lang['linkedin']           = 'Linkedin';
-$lang['github']             = 'Github';
-$lang['dropbox']            = 'Dropbox';
+$lang['site_setup']           = 'Site general setup';
+$lang['ss_tab_seo']           = 'SEO';
+$lang['ss_tab_social']        = 'Social Networks';
+$lang['ss_tab_settings']      = 'Settings';
+$lang['ss_tab_blocks']        = 'Blocks';
+$lang['ss_tab_frontend_home'] = 'Homepage';
+$lang['admin_domain']         = 'Admin domain';
+$lang['header_script']        = 'Header script';
+$lang['footer_script']        = 'Footer script';
+$lang['block_scripts']        = 'Global Scripts';
+$lang['block_social']         = 'Social Networks';
+$lang['facebook']             = 'Facebook';
+$lang['twitter']              = 'Twitter';
+$lang['youtube']              = 'Youtube';
+$lang['instagram']            = 'Instagram';
+$lang['googleplus']           = 'Google Plus';
+$lang['dribbble']             = 'Dribbble';
+$lang['linkedin']             = 'Linkedin';
+$lang['github']               = 'Github';
+$lang['dropbox']              = 'Dropbox';
 
 $lang['block_verifivation'] = 'Search Engine verification';
 $lang['google_verif']       = 'Google verification';
@@ -272,10 +266,10 @@ $lang['']                   = '';
 $lang['']                   = '';
 $lang['']                   = '';
 
- //USERS GROUP
-$lang['profile_edit']       = 'Edit profile';
-$lang['profile_info']       = 'Profile info';
-$lang['profile_group']      = 'User group';
+//USERS GROUP
+$lang['profile_edit']  = 'Edit profile';
+$lang['profile_info']  = 'Profile info';
+$lang['profile_group'] = 'User group';
 //USERS
 $lang['usr_title']          = 'Users';
 $lang['usr_title_list']     = 'Users list';
@@ -297,92 +291,89 @@ $lang['usr_group']          = 'User Group';
 $lang['usr_select_group']   = 'Select Group';
 
 //USER GROUPS
-$lang['grp_title']          = 'User groups / permissions';
-$lang['grp_notice']         = 'Notice';
-$lang['grp_name']           = 'Group name';
-$lang['grp_title_list']     = 'Groups';
-$lang['grp_edit']           = 'Edit permissions';
-$lang['grp_edit_id']        = 'Edit group identification';
+$lang['grp_title']      = 'User groups / permissions';
+$lang['grp_notice']     = 'Notice';
+$lang['grp_name']       = 'Group name';
+$lang['grp_title_list'] = 'Groups';
+$lang['grp_edit']       = 'Edit permissions';
+$lang['grp_edit_id']    = 'Edit group identification';
 
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
-$lang['']                   = '';
+$lang[''] = '';
+$lang[''] = '';
+$lang[''] = '';
+$lang[''] = '';
 
- //SLIDERS
-$lang['menu_sliders']       = 'Sliders';
-$lang['add_slider_name']    = 'Slider name';
-$lang['sliders_title']      = 'Manage slides';
-$lang['sliders_list']       = 'Sliders';
-$lang['slide_editing']      = 'Editing slide';
-$lang['slide_tagline']      = 'Tagline (optional)';
-$lang['slide_title']        = 'Title';
-$lang['slide_description']  = 'Description (optional)';
-$lang['slide_btn_text']     = 'Custom button tex (optional)';
-$lang['slide_uri']          = '(internal link) URI';
-$lang['slide_url']          = '(outbound link) URL';
-
+//SLIDERS
+$lang['menu_sliders']      = 'Sliders';
+$lang['add_slider_name']   = 'Slider name';
+$lang['sliders_title']     = 'Manage slides';
+$lang['sliders_list']      = 'Sliders';
+$lang['slide_editing']     = 'Editing slide';
+$lang['slide_tagline']     = 'Tagline (optional)';
+$lang['slide_title']       = 'Title';
+$lang['slide_description'] = 'Description (optional)';
+$lang['slide_btn_text']    = 'Custom button tex (optional)';
+$lang['slide_uri']         = '(internal link) URI';
+$lang['slide_url']         = '(outbound link) URL';
 
 
 //MENU
-$lang['menu_menu']          = 'Menu';
-$lang['edit_menu']          = 'Edit menu';
-$lang['choose_menu']        = 'Choose menu';
-$lang['available_menus']    = 'Available Menus';
-$lang['menu_tree']          = 'Menu Tree';
-$lang['add_new_menu_item']  = 'Add new menu item';
-$lang['e_name']             = 'Name';
-$lang['e_uri']              = '(internal) URI';
-$lang['e_url']              = '(outbound) URL';
-$lang['e_sample_name']      = 'A sample name';
-$lang['n_change_me']        = 'Change me!';
-$lang['']                   = '';
+$lang['menu_menu']         = 'Menu';
+$lang['edit_menu']         = 'Edit menu';
+$lang['choose_menu']       = 'Choose menu';
+$lang['available_menus']   = 'Available Menus';
+$lang['menu_tree']         = 'Menu Tree';
+$lang['add_new_menu_item'] = 'Add new menu item';
+$lang['e_name']            = 'Name';
+$lang['e_uri']             = '(internal) URI';
+$lang['e_url']             = '(outbound) URL';
+$lang['e_sample_name']     = 'A sample name';
+$lang['n_change_me']       = 'Change me!';
+$lang['']                  = '';
 
 //LANGUAGES
-$lang['set_languages']      = 'Languages';
-$lang['choose_language']    = 'Choose language';
-$lang['lang_frontend']      = 'Frotend';
-$lang['lang_admin']         = 'Admin';
-$lang['ed_langs']    = 'Edit language strings';
-$lang['ml_string_name']     = 'String';
-$lang['ml_strings']         = 'Strings';
-$lang['ml_translation']     = 'Translation';
-$lang['']                   = '';
-$lang['']                   = '';
-
-
+$lang['set_languages']   = 'Languages';
+$lang['choose_language'] = 'Choose language';
+$lang['lang_frontend']   = 'Frotend';
+$lang['lang_admin']      = 'Admin';
+$lang['ed_langs']        = 'Edit language strings';
+$lang['ml_string_name']  = 'String';
+$lang['ml_strings']      = 'Strings';
+$lang['ml_translation']  = 'Translation';
+$lang['']                = '';
+$lang['']                = '';
 
 
 //LOGIN
-$lang['button_log_in']      = 'Log In';
-$lang['er_invalid_email']   = '<strong>Invalid Email Format!</strong> Please check your email adress.';
-$lang['er_cant_find_usr']   = 'Wrong email or password!';
-$lang['login_title']        = 'Login';
-$lang['logout_title']       = 'Log Out';
+$lang['button_log_in']    = 'Log In';
+$lang['er_invalid_email'] = '<strong>Invalid Email Format!</strong> Please check your email adress.';
+$lang['er_cant_find_usr'] = 'Wrong email or password!';
+$lang['login_title']      = 'Login';
+$lang['logout_title']     = 'Log Out';
 
-$lang['select_category']    = 'Select Category';
+$lang['select_category'] = 'Select Category';
 
-$lang['publishing_info']    = 'Publishing info';
-$lang['last_edited']        = 'Last edited';
-$lang['cover_image']        = 'Cover image';
-$lang['select_cover']       = 'Select Cover Picture';
+$lang['publishing_info'] = 'Publishing info';
+$lang['last_edited']     = 'Last edited';
+$lang['cover_image']     = 'Cover image';
+$lang['select_cover']    = 'Select Cover Picture';
 
 //WEBCAMS
-$lang['menu_webcams_dd']    = 'Webcams';
-$lang['menu_webcams']       = 'Webcams';
-$lang['menu_wcam_cat']      = 'Webcam categories';
-$lang['webcams_cat']        = 'Manage webcam categories';
-$lang['webcams_cat_list']   = 'Categories';
-$lang['wcat_title']         = 'Category Title';
-$lang['number_of_wcat']     = 'Number of instances';
+$lang['menu_webcams_dd']  = 'Webcams';
+$lang['menu_webcams']     = 'Webcams';
+$lang['menu_wcam_cat']    = 'Webcam categories';
+$lang['webcams_cat']      = 'Manage webcam categories';
+$lang['webcams_cat_list'] = 'Categories';
+$lang['wcat_title']       = 'Category Title';
+$lang['number_of_wcat']   = 'Number of instances';
 //$lang['add_new_wcat']     = '';
-$lang['wcat_editing']       = 'Webcam category edit';
-$lang['wcat_seo_id']        = 'SEO ID';
-$lang['wcat_seo_id_q']      = 'This field need to be filled to category can be visible at frontend';
-$lang['wcat_description']   = 'Description';
-$lang['wcat_tags']          = 'Keywords';
-$lang['wcat_image']         = 'Cover image';
-$lang['webcam_info']        = 'Info';
+$lang['wcat_editing']     = 'Webcam category edit';
+$lang['wcat_seo_id']      = 'SEO ID';
+$lang['wcat_seo_id_q']    = 'This field need to be filled to category can be visible at frontend';
+$lang['wcat_description'] = 'Description';
+$lang['wcat_tags']        = 'Keywords';
+$lang['wcat_image']       = 'Cover image';
+$lang['webcam_info']      = 'Info';
 
 $lang['webcam_editing']     = 'Manage webcams';
 $lang['webcam_title']       = 'Projects';
@@ -433,62 +424,62 @@ $lang['original_title']     = 'Original title';
 //$lang['video_author']       = 'Publisher';
 //$lang['video_created']      = 'Created';
 //$lang['video_edit']         = 'Edit#';
-$lang['video_published']    = 'Published';
-$lang['video_publ_tip']     = 'Publish';
-$lang['video_editing']      = 'Video Editing';
-$lang['vid_e_title']        = ' Title';
-$lang['vid_e_url']          = 'URL';
-$lang['vid_e_options']      = 'Options';
-$lang['vid_e_publish']      = 'Published';
-$lang['vid_e_featured']     = 'Featured';
-$lang['video_thumb']        = 'Thumbnail image';
+$lang['video_published'] = 'Published';
+$lang['video_publ_tip']  = 'Publish';
+$lang['video_editing']   = 'Video Editing';
+$lang['vid_e_title']     = ' Title';
+$lang['vid_e_url']       = 'URL';
+$lang['vid_e_options']   = 'Options';
+$lang['vid_e_publish']   = 'Published';
+$lang['vid_e_featured']  = 'Featured';
+$lang['video_thumb']     = 'Thumbnail image';
 //$lang['add_new_video']      = 'Add new';
-$lang['add_video_title']    = 'title';
-$lang['add_video_url']      = 'Video URL';
-$lang['select_publisher']   = 'Select publisher';
-$lang['vide_select_img']    = 'Select image';
+$lang['add_video_title']  = 'title';
+$lang['add_video_url']    = 'Video URL';
+$lang['select_publisher'] = 'Select publisher';
+$lang['vide_select_img']  = 'Select image';
 
 //common scripts
-$lang['com_add_vid']        = 'Add video';
-$lang['com_select_video']   = 'Select video';
+$lang['com_add_vid']      = 'Add video';
+$lang['com_select_video'] = 'Select video';
 
 //SETTINGS 
-$lang['tools_dropdown']     = 'Tools';
-$lang['dimensions_title']   = 'Image Dimensions';
-$lang['dimensions_name']    = 'Name';
-$lang['dimensions_actions'] = 'Actions';
-$lang['dimensions_edit']    = 'Edit';
-$lang['dimensions_editing'] = 'Dimensions editing';
-$lang['dimensions_delete']  = 'Delete';
-$lang['dim_e_submit_button']= 'Submit';
-$lang['img_diension_title'] = 'Image dimension name';
-$lang['img_dim_width']      = 'Width (px)';
-$lang['img_dim_height']     = 'Height (px)';
-$lang['img_dim_quality']    = 'Quality';
-$lang['img_dim_crop']       = 'Crop&stretch to size';
-$lang['img_dim_set_big']    = 'Settings for big image';
-$lang['img_dim_set_small']  = 'Settings for small image';
-$lang['img_dim_enb_small']  = 'Create also a small image';
-$lang['img_dim_enb_mod']    = 'Enable on modules';
-$lang['enter_dim_name']     = 'Enter dimensions name';
-$lang['dim_general_upl']    = 'General uploads (media library)';
-$lang['dim_video_upl']      = 'General Video thumb';
-$lang['img_dim_gray']       = 'Convert to grayscale';
-$lang['img_dim_set_wmark']  = 'Watermark';
+$lang['tools_dropdown']      = 'Tools';
+$lang['dimensions_title']    = 'Image Dimensions';
+$lang['dimensions_name']     = 'Name';
+$lang['dimensions_actions']  = 'Actions';
+$lang['dimensions_edit']     = 'Edit';
+$lang['dimensions_editing']  = 'Dimensions editing';
+$lang['dimensions_delete']   = 'Delete';
+$lang['dim_e_submit_button'] = 'Submit';
+$lang['img_diension_title']  = 'Image dimension name';
+$lang['img_dim_width']       = 'Width (px)';
+$lang['img_dim_height']      = 'Height (px)';
+$lang['img_dim_quality']     = 'Quality';
+$lang['img_dim_crop']        = 'Crop&stretch to size';
+$lang['img_dim_set_big']     = 'Settings for big image';
+$lang['img_dim_set_small']   = 'Settings for small image';
+$lang['img_dim_enb_small']   = 'Create also a small image';
+$lang['img_dim_enb_mod']     = 'Enable on modules';
+$lang['enter_dim_name']      = 'Enter dimensions name';
+$lang['dim_general_upl']     = 'General uploads (media library)';
+$lang['dim_video_upl']       = 'General Video thumb';
+$lang['img_dim_gray']        = 'Convert to grayscale';
+$lang['img_dim_set_wmark']   = 'Watermark';
 
-$lang['dim_wmark_enable']   = 'Enable watermark';
-$lang['dim_wmark_position'] = 'Watermark position';
-$lang['dim_wmark_center']   = 'Center to image';
-$lang['dim_wmark_tl']       = 'Top left';
-$lang['dim_wmark_tr']       = 'Top right';
-$lang['dim_wmark_br']       = 'Bottom right';
-$lang['dim_wmark_bl']       = 'Bottom left';
-$lang['img_dim_opacity']    = 'Watermark opacity';
-$lang['img_browse']         = 'Browse..';
-$lang['dim_wmark_ratio']    = 'Ratio / watermark size';
-$lang['dim_wmark_ratio_d']  = 'How many times <strong>smaller</strong> will be the watermark compared to image width';
-$lang['wmark_full_width']   = 'Full Width (same width as image)';
-$lang['wmark_times_smaller']= 'times smaller';
+$lang['dim_wmark_enable']    = 'Enable watermark';
+$lang['dim_wmark_position']  = 'Watermark position';
+$lang['dim_wmark_center']    = 'Center to image';
+$lang['dim_wmark_tl']        = 'Top left';
+$lang['dim_wmark_tr']        = 'Top right';
+$lang['dim_wmark_br']        = 'Bottom right';
+$lang['dim_wmark_bl']        = 'Bottom left';
+$lang['img_dim_opacity']     = 'Watermark opacity';
+$lang['img_browse']          = 'Browse..';
+$lang['dim_wmark_ratio']     = 'Ratio / watermark size';
+$lang['dim_wmark_ratio_d']   = 'How many times <strong>smaller</strong> will be the watermark compared to image width';
+$lang['wmark_full_width']    = 'Full Width (same width as image)';
+$lang['wmark_times_smaller'] = 'times smaller';
 
 //ARTICLES
 $lang['article_rubrics']    = 'Article Categories';
@@ -531,12 +522,11 @@ $lang['category_layout']    = 'Category Layout';
 
 
 //GLOBAL
-$lang['evolve_welcome']     = 'Welcome';
-$lang['evolve_project']     = 'Evolve Project!';
-$lang['evolve_general']     = 'General';
-$lang['evolve_copyright']   = 'All Rights Reserved.';
-$lang['evolve_ver']         = 'Ver';
-
+$lang['evolve_welcome']   = 'Welcome';
+$lang['evolve_project']   = 'Evolve Project!';
+$lang['evolve_general']   = 'General';
+$lang['evolve_copyright'] = 'All Rights Reserved.';
+$lang['evolve_ver']       = 'Ver';
 
 
 //MENU NAVIGATION

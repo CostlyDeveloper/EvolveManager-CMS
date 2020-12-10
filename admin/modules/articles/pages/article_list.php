@@ -23,7 +23,7 @@
       //if(!$get_article_list) print_r($mysqli->error);
   
   $get_article_rubrics = $mysqli->query("
-      SELECT evolve_article_rubrics_data.title
+      SELECT evolve_article_rubrics_data.title, evolve_article_rubrics.id
       FROM evolve_article_rubrics
       
       LEFT JOIN evolve_article_rubrics_data
@@ -41,10 +41,11 @@
     
   $mod                  = $get_module->fetch_array(MYSQLI_ASSOC);
   $rub                  = $get_article_rubrics->fetch_array(MYSQLI_ASSOC);
-  //if($developing) prb($rub).prb($mod);
+  if($developing) prb($rub);
   ?>
 <input type="hidden" name="page_title" value="<?php echo $mod['name'].' - '. $rub['title']; ?>" />
 <input type="hidden" name="moduleID" id="moduleID" value="<?php echo $module_id; ?>" />
+<input type="hidden" name="rubric_id" id="rubric_id" value="<?php echo $rub['id']; ?>" />
 <input type="hidden" id="ch_moduleID" name="ch_moduleID" value="1" />
 <!-- page content -->
 <div class="right_col" role="main">

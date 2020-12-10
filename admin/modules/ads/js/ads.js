@@ -80,6 +80,7 @@ jQuery(document).ready(function($) {
   // /ADD NEW 
   // PUBLISH SWITCH (category list)
   $('.publish_switch').change(function(e) {
+    console.log('2');
     e.preventDefault();
     var instanceID = $(this).attr('data-id');
     if ($(this).prop('checked')) {

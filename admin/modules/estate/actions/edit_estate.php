@@ -10,7 +10,9 @@ evolveAllow($_POST['userID'], $_POST['moduleID'], true);//Second check
 if (isset($_POST['instanceID'])) {
   $instance_id            = $mysqli->real_escape_string($_POST['instanceID']);
   $user_id                = $mysqli->real_escape_string($_POST['userID']);
-
+  $pagination             = $mysqli->real_escape_string($_POST['pagination']);
+  $page_layout            = $mysqli->real_escape_string($_POST['page_layout']);
+  
   //DATA - MULTILANG
   $slugs_arr = languages();
   foreach($slugs_arr as $slug){      
@@ -26,12 +28,12 @@ if (isset($_POST['instanceID'])) {
 	  }
       
     $unique = $mysqli->query("
-      CREATE UNIQUE INDEX cat_index 
-      ON evolve_cd_cody_data (for_instance,lang)
+      CREATE UNIQUE INDEX cat_index
+      ON evolve_estate_data (for_instance,lang)
     ");        
     //if(!$unique) print_r($mysqli->error);
     $sql = $mysqli->query("  
-      INSERT INTO  evolve_cd_cody_data (for_instance, lang, seo_id, title, description) 
+      INSERT INTO  evolve_estate_data (for_instance, lang, seo_id, title, description) 
       VALUES ('$instance_id', '$slug', '$seoID', '$title', '$description')
       ON DUPLICATE KEY UPDATE
       seo_id              = '$seoID', 
@@ -40,7 +42,7 @@ if (isset($_POST['instanceID'])) {
     ");
     if($developing) if(!$sql) print_r($mysqli->error);
     $unique = $mysqli->query("
-      ALTER TABLE evolve_cd_cody_data
+      ALTER TABLE evolve_estate_data
       DROP INDEX cat_index;
     ");
       
@@ -48,7 +50,17 @@ if (isset($_POST['instanceID'])) {
   }
 // /DATA - MULTILANG
 
+  $sql = $mysqli->query("     
+    UPDATE evolve_estate_list
+    SET 
+    pagination             = '$pagination',
+    layout_type            = '$page_layout'
+    WHERE id = '$instance_id' 
+  ");
+  if($developing) if(!$sql) print_r($mysqli->error);         
 
+            
+  
   //render response data in JSON format
   echo json_encode($response);
 }

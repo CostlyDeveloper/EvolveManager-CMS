@@ -36,6 +36,7 @@ if ($bridge_cody_chat) {
     require(FRONTEND_PATH . 'system/inc/config_bridge_cody_chat.php');
 } else {
     require(FRONTEND_PATH . 'system/inc/config_query.php');
+
 }
 
 if (defined('ADMIN')) {
@@ -45,6 +46,7 @@ if (defined('ADMIN')) {
     // /ADMIN
 } elseif (defined('FRONTEND')) {
     //FRONTEND
+
     //include(ADMIN_PATH.'language/interno.php');
     $level_1_seo = '';
     $level_2_seo = '';
@@ -69,26 +71,29 @@ if (defined('ADMIN')) {
 }
 
 require(FRONTEND_PATH . 'system/inc/insert.php');//Insert
+
 define('ADMIN_URL', $domain . '/admin/');
 
 if (isset($portal_ID)) { //FRONTEND
+
     $portal_array =  array_filter(
         $portals,
         function ($item) use ($portal_ID) {
             return $item->id == $portal_ID;
         }
     );
-    $portal = new stdClass();
+    // $portal = new stdClass();
     $portal = $portal_array[0];
 
-    define('FRONTEND_URL', $portal->url . '/');
+     define('FRONTEND_URL', $portal->url . '/');
+
     define('CHAT_URL', $portal->url . '/chat/');
     $language = $portal->lang;
 
 }// /FRONTEND
 
 if ($developing == 1) {
-    $ver = time('timestamp');
+    $ver = strtotime('timestamp');
 }
 if ($min) {
     $min = '.min';

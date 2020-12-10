@@ -9,12 +9,12 @@ evolveAllow($_POST['userID'], $_POST['moduleID'], true);//Second check
 
 $response['message'] = '';
 
-$total_media = $mysqli->real_escape_string($_POST['total_media']);
+$total_media  = $mysqli->real_escape_string($_POST['total_media']);
 $gallery_name = $mysqli->real_escape_string($_POST['gallery_title']);
-$gallery_id = $mysqli->real_escape_string($_POST['add_into_gallery']);
+$gallery_id   = $mysqli->real_escape_string($_POST['add_into_gallery']);
 
 if ($gallery_id != 'false') {
-    $response['message'] = 'add_into_gallery= '. $gallery_id;
+    $response['message'] = 'add_into_gallery= ' . $gallery_id;
 
     //Find gallery then increase num in gallery
     $sql = $mysqli->query(" 
@@ -42,7 +42,7 @@ foreach ($_POST as $name => $val) {
     FROM evolve_media
     WHERE evolve_media.id = '$val'
     ");
-        $media = $get_media->fetch_array(MYSQLI_ASSOC);
+        $media     = $get_media->fetch_array(MYSQLI_ASSOC);
         if (!$media) {
             $response['message'] = 'err';
         }
@@ -51,8 +51,8 @@ foreach ($_POST as $name => $val) {
             $thumb = $media['thumb'];
         }
         $filename = $media['filename'];
-        $folder = $media['folder'];
-        $sql = $mysqli->query("  
+        $folder   = $media['folder'];
+        $sql      = $mysqli->query("  
         INSERT INTO evolve_gallery_items (gallery_id, media_id, thumb, filename, folder) 
         VALUES ('$gallery_id', '$val', '$thumb', '$filename', '$folder')      
         ");

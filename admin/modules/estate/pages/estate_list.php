@@ -2,12 +2,12 @@
 defined('ADMIN') or die();//prevent direct open
 
 $get_product_category_list = $mysqli->query("
-    SELECT evolve_cd_cody_data.title, evolve_cd_cody_list.id as instance_id
-    FROM evolve_cd_cody_list
+    SELECT evolve_estate_data.title, evolve_estate_list.id as instance_id
+    FROM evolve_estate_list
       
-    LEFT JOIN evolve_cd_cody_data
-    ON evolve_cd_cody_data.for_instance = evolve_cd_cody_list.id
-      AND evolve_cd_cody_data.lang =  '$default_language'
+    LEFT JOIN evolve_estate_data
+    ON evolve_estate_data.for_instance = evolve_estate_list.id
+      AND evolve_estate_data.lang =  '$default_language'
   ");
 // if(!$get_product_category_list) print_r($mysqli->error);
 
@@ -30,25 +30,27 @@ $module_child = 3;
     <div class="">
         <div class="input-group">
             <button id="add_new_category" type="button"
-                    class="btn btn-info"><?php echo $lang['button_add_new'] ?> Category</button>
+                    class="btn btn-info"><?php echo $lang['button_add_new'] .' '.$lang['button_category']?></button>
         </div>
         <div class="page-title">
-
+            <div class="title_left">
+                <h3><?php echo $lang[$module_name . '_title']; ?></h3>
+            </div>
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>CostlyDeveloper / CodyChat modules</h2>
+                        <h2><?php echo $lang[$module_name . '_categories']; ?></h2>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
-                        <div>
+                        <div class="table-responsive">
                             <table class="table table-striped jambo_table bulk_action">
                                 <thead>
                                 <tr class="headings">
                                     <th>
                                     </th>
                                     <th class="column-title"><?php echo $lang['rubric_title'] ?> </th>
-                                    <th class="column-title">Number of licences</th>
+                                    <th class="column-title"><?php echo $lang['number_of_articles']; ?> </th>
                                     <th>
                                     </th>
                                     <th class="bulk-actions" colspan="7">
@@ -63,10 +65,10 @@ $module_child = 3;
                                         <td class="a-center ">
                                         </td>
                                         <td><?php echo $category_item['title']; ?></td>
-                                        <td><?php echo get_items_nr($category_item['instance_id'], 'evolve_cd_cody_licences') ?> </td>
+                                        <td><?php echo get_items_nr($category_item['instance_id'], 'evolve_estate_rooms') ?> </td>
                                         <td class="text-right last">
 
-                                            <a href="index.php?cd_cody_licence_list=<?php echo $category_item['instance_id']; ?>"
+                                            <a href="index.php?room_list=<?php echo $category_item['instance_id']; ?>"
                                                class="btn btn-primary btn-xs"><i
                                                         class="fa fa-list"></i> <?php echo $lang['button_show_items']; ?>
                                             </a>

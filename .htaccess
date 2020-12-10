@@ -7,6 +7,7 @@ RewriteEngine On
 #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 
+
 RewriteRule ^(admin)($|/) - [L]
 RewriteRule ^(chat)($|/) - [L]
 
@@ -14,6 +15,7 @@ RewriteRule ^(chat)($|/) - [L]
 #
 #SEO ID
 #
+
 
 
 #GET lang 1 level 
